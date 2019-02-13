@@ -22,8 +22,8 @@ export class DataStorageService {
        .pipe(map(
            (response: Response) => {
                const recipes: Recipe[] = response.json();
-               for(let recipe of recipes){
-                   if(!recipe['ingredients']){
+               for (let recipe of recipes) {
+                   if (!recipe['ingredients']) {
                        recipe['ingredients'] = [];
                    }
                }
